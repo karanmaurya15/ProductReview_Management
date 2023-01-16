@@ -46,6 +46,9 @@
             productReviewManagment.RetriveProductIdAndReview(productList);
             productReviewManagment.SkipTop5Record(productList);
             productReviewManagment.ProductIdAndReview(productList);
+
+            DataBaseOperation dataBaseOperation = new DataBaseOperation();
+            dataBaseOperation.CreateDataTable();
         }
     }
 }
