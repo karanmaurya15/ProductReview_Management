@@ -10,9 +10,18 @@ namespace ProducyReviewManagement
     {
         public void TopRecord(List<ProductReview> productslist)
         {
-            var topRecord = (from record in productslist orderby record.Rating descending select record).Take(3);
+            var records = (from record in productslist orderby record.Rating descending select record).Take(3);
             Console.WriteLine("\n-------Top 3 Reviews-------");
-            foreach (var item in topRecord)
+            foreach (var item in records)
+            {
+                Console.WriteLine($"Product ID : {item.ProductId}, " + $"User Id : {item.UserId}, " + $"Rating : {item.Rating}, " + $"Review : {item.Review}, " + $"IsLike : {item.IsLike}");
+            }
+        }
+        public void SellectedRecord(List<ProductReview> productlist)
+        {
+            var records = (from record in productlist where (record.ProductId == 1 || record.ProductId == 4 || record.ProductId == 9) && record.Rating > 3 select record);
+            Console.WriteLine("\n-------Rating grater than 3-------");
+            foreach (var item in records)
             {
                 Console.WriteLine($"Product ID : {item.ProductId}, " + $"User Id : {item.UserId}, " + $"Rating : {item.Rating}, " + $"Review : {item.Review}, " + $"IsLike : {item.IsLike}");
             }
