@@ -53,6 +53,8 @@
             dataBaseOperation.AvgRatingOfProductId();
 
             productReviewManagment.RetrieveReviewMessage(productList);
+
+            dataBaseOperation.OrderByRating();
         }
     }
 }
