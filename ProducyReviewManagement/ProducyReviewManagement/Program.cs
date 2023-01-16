@@ -50,6 +50,7 @@
             DataBaseOperation dataBaseOperation = new DataBaseOperation();
             dataBaseOperation.CreateDataTable();
             dataBaseOperation.RetrieveIsLikeValueWithTrue();
+            dataBaseOperation.AvgRatingOfProductId();
         }
     }
 }
