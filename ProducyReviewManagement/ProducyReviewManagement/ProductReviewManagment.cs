@@ -53,5 +53,14 @@ namespace ProducyReviewManagement
                 Console.WriteLine($"Product ID : {item.ProductId}, " + $"User Id : {item.UserId}, " + $"Rating : {item.Rating}, " + $"Review : {item.Review}, " + $"IsLike : {item.IsLike}");
             }
         }
+        public void ProductIdAndReview(List<ProductReview> productlist)
+        {
+            var records = productlist.Select(e => new { e.ProductId, e.Review });
+            Console.WriteLine("\n-------Retrive only Product Id and Review------");
+            foreach (var item in records)
+            {
+                Console.WriteLine($"Product Id : {item.ProductId}, " + $"Review : {item.Review}");
+            }
+        }
     }
 }
