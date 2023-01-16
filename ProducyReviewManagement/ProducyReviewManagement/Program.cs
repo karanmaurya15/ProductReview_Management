@@ -39,6 +39,8 @@
             {
                 Console.WriteLine($"Product ID : {item.ProductId}, " + $"User Id : {item.UserId}, " + $"Rating : {item.Rating}, " + $"Review : {item.Review}, " + $"IsLike : {item.IsLike}");
             }
+            ProductReviewManagment productReviewManagment = new ProductReviewManagment();
+            productReviewManagment.TopRecord(productList);
         }
     }
 }
