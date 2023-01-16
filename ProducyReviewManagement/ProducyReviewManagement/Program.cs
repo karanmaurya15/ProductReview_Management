@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wellcome to Product Review Management\n");
+            Console.WriteLine("Wellcome to Product Review Management");
 
             List<ProductReview> productList = new List<ProductReview>()
             { 
@@ -34,7 +34,7 @@
                 new ProductReview() {ProductId = 4,UserId = 5, Rating = 4, Review = "Good", IsLike = true},
                 new ProductReview() {ProductId = 5,UserId = 2, Rating = 4.5, Review = "VeryGood", IsLike = true},
             };
-            Console.WriteLine("-------Product Review-------\n");
+            Console.WriteLine("\n-------Product Review-------");
             foreach(var item in productList)
             {
                 Console.WriteLine($"Product ID : {item.ProductId}, " + $"User Id : {item.UserId}, " + $"Rating : {item.Rating}, " + $"Review : {item.Review}, " + $"IsLike : {item.IsLike}");
@@ -42,6 +42,7 @@
             ProductReviewManagment productReviewManagment = new ProductReviewManagment();
             productReviewManagment.TopRecord(productList);
             productReviewManagment.SellectedRecord(productList);
+            productReviewManagment.CountReviewOfProductId(productList);
         }
     }
 }

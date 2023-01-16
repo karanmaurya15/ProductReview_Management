@@ -26,5 +26,14 @@ namespace ProducyReviewManagement
                 Console.WriteLine($"Product ID : {item.ProductId}, " + $"User Id : {item.UserId}, " + $"Rating : {item.Rating}, " + $"Review : {item.Review}, " + $"IsLike : {item.IsLike}");
             }
         }
+        public void CountReviewOfProductId(List<ProductReview> productslist)
+        {
+            var records = productslist.GroupBy(x => x.ProductId).Select(e => new { ProductId = e.Key, Count = e.Count() });
+            Console.WriteLine("\n-------Count Review of Product-------");
+            foreach (var item in records)
+            {
+                Console.WriteLine($"Product Id : {item.ProductId}, " + $"Count  : {item.Count}");
+            }
+        }
     }
 }
