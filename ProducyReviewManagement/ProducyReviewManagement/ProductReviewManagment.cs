@@ -44,5 +44,14 @@ namespace ProducyReviewManagement
                 Console.WriteLine($"Product Id : {item.ProductId}, " + $"Review : {item.Review}");
             }
         }
+        public void SkipTop5Record(List<ProductReview> productlist)
+        {
+            var records = (from record in productlist select record).Skip(5);
+            Console.WriteLine("\n-------Skip top 5 Records-------");
+            foreach (var item in records)
+            {
+                Console.WriteLine($"Product ID : {item.ProductId}, " + $"User Id : {item.UserId}, " + $"Rating : {item.Rating}, " + $"Review : {item.Review}, " + $"IsLike : {item.IsLike}");
+            }
+        }
     }
 }

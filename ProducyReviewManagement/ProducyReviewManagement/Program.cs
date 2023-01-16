@@ -44,6 +44,7 @@
             productReviewManagment.SellectedRecord(productList);
             productReviewManagment.CountReviewOfProductId(productList);
             productReviewManagment.RetriveProductIdAndReview(productList);
+            productReviewManagment.SkipTop5Record(productList);
         }
     }
 }
