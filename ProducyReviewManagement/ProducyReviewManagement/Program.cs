@@ -14,21 +14,21 @@
                 new ProductReview() {ProductId =  4,UserId = 6, Rating = 2, Review = "bad", IsLike = false},
                 new ProductReview() {ProductId =  5,UserId = 2, Rating = 4, Review = "Good", IsLike = true},
                 new ProductReview() {ProductId =  6,UserId = 3, Rating = 3, Review = "Average", IsLike = true},
-                new ProductReview() {ProductId =  7,UserId = 1, Rating = 4, Review = "Good", IsLike = true},
+                new ProductReview() {ProductId =  7,UserId = 1, Rating = 4, Review = "Nice", IsLike = true},
                 new ProductReview() {ProductId =  8,UserId = 2, Rating = 4, Review = "Good", IsLike = true},
                 new ProductReview() {ProductId =  9,UserId = 1, Rating = 1, Review = "Verybad", IsLike = false},
                 new ProductReview() {ProductId = 4,UserId = 5, Rating = 2, Review = "bad", IsLike = false},
                 new ProductReview() {ProductId = 1,UserId = 5, Rating = 4, Review = "Good", IsLike = true},
                 new ProductReview() {ProductId = 2,UserId = 1, Rating = 3, Review = "Average", IsLike = true},
-                new ProductReview() {ProductId = 4,UserId = 2, Rating = 4, Review = "Good", IsLike = true},
+                new ProductReview() {ProductId = 4,UserId = 2, Rating = 4, Review = "Nice", IsLike = true},
                 new ProductReview() {ProductId = 4,UserId = 4, Rating = 2, Review = "bad", IsLike = false},
-                new ProductReview() {ProductId = 1,UserId = 1, Rating = 4, Review = "Good", IsLike = true},
+                new ProductReview() {ProductId = 1,UserId = 1, Rating = 4, Review = "Nice", IsLike = true},
                 new ProductReview() {ProductId = 6,UserId = 1, Rating = 4, Review = "Good", IsLike = true},
                 new ProductReview() {ProductId = 7,UserId = 3, Rating = 2.5, Review = "Average", IsLike = true},
                 new ProductReview() {ProductId = 9,UserId = 3, Rating = 4.5, Review = "VeryGood", IsLike = true},
                 new ProductReview() {ProductId = 9,UserId = 6, Rating = 4, Review = "Good", IsLike = true},
                 new ProductReview() {ProductId = 2,UserId = 6, Rating = 4.5, Review = "VeryGood", IsLike = true},
-                new ProductReview() {ProductId = 3,UserId = 4, Rating = 4, Review = "Good", IsLike = true},
+                new ProductReview() {ProductId = 3,UserId = 4, Rating = 4, Review = "Nice", IsLike = true},
                 new ProductReview() {ProductId = 1,UserId = 3, Rating = 3, Review = "Average", IsLike = true},
                 new ProductReview() {ProductId = 5,UserId = 2, Rating = 2, Review = "bad", IsLike = false},
                 new ProductReview() {ProductId = 4,UserId = 5, Rating = 4, Review = "Good", IsLike = true},
@@ -51,6 +51,8 @@
             dataBaseOperation.CreateDataTable();
             dataBaseOperation.RetrieveIsLikeValueWithTrue();
             dataBaseOperation.AvgRatingOfProductId();
+
+            productReviewManagment.RetrieveReviewMessage(productList);
         }
     }
 }
